@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<style>
+    body{
+        background-color:cadetblue ;
+
+    }
+    h1{
+        text-align: center;
+        font-style: italic;
+    }
+    form{
+        text-align:center;
+        border-radius: 2px solid black;
+    }
+</style>
+<body>
+    <form id="myform">
+        <label>number</label>
+        <input type="'number "id="number"><br><br>
+        <label>password</label>
+        <input type="password" id="password"><br><br>
+        <label>name</label>
+        <input type="'text" id="name"><br><br>
+        <input type="'submit" value="submit your data">
+    </form>
+          <script>
+            let form = document.getElementById("my form");
+            form.addEventListener("submit",function(event){
+                event.preventDefault();
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+                let number = document.getElementById("number").value;
+                if(name==""){
+                     alert("Enter your name");
+                }
+                else if(email== ""){
+                    alert("Enter your email");
+                }
+                else if(password == ""){
+                    alert("Enter your password");
+
+                }
+                else if(number ==""){
+                    alert("Enter your number");
+                }
+                else {
+                    alert("Form submitted successfully");
+                }
+            });
+          </script>
+    
+</body>
+</html>

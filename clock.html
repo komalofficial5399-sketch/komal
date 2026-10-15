@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="hours">00</span>
+        <span id="min">00</span>
+            <span id="second"> 00</span>
+            <span id="ap">A.M</span>
+    <script>
+        function showTime(){
+            let h = documents.getElementByID('hour');
+            let m = document.getElementByID('min')
+            let s = document.getElementById('second');
+            let a = document.getElementById('ap');
+            let d = new.date();
+            let hours = d.getHours();
+            let min = d.getminutes();
+            let second = d.getseconds();
+            h.innerhtml = hours;
+            m.innerhtml = min;
+            s.innerhtml = second;
+            if(hours > 12){
+                hours = hours - 12;
+
+            }
+            setinterval(showtime,1000);
+
+        }
+        showTime()
+    </script>
+    
+</body>
+</html>
